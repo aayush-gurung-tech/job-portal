@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="Home">
+                JobPortal
+            </a>
+
+            <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-hidden="true">
+            <label class="nav-toggle-btn" for="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav" aria-label="Primary">
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="login.html">Find Jobs</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-ghost" href="login.html">Login</a>
+                <a class="btn btn-primary" href="login.html">Post a Job</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-label="Hero">
+            <div class="container hero-card">
+                <div class="hero-media" aria-hidden="true">
+                    <img class="hero-img" src="assets/image/image.png" alt="">
+                </div>
+
+                <div class="hero-content">
+                    <h1>Elevate Your Career in<br>Tech, Globally</h1>
+                    <p>Connect with remote roles at top companies</p>
+                </div>
+
+                <form class="hero-filter" action="login.html" aria-label="Job filters">
+                    <div class="filter-field">
+                        <label for="looking">I am looking for...</label>
+                        <select id="looking" name="looking">
+                            <option>React, AI, Product Manager</option>
+                            <option>Frontend Developer</option>
+                            <option>Backend Developer</option>
+                            <option>UI/UX Designer</option>
+                        </select>
+                    </div>
+                    <div class="filter-field">
+                        <label for="located">Located in...</label>
+                        <select id="located" name="located">
+                            <option>San Francisco, Remote</option>
+                            <option>Remote (Worldwide)</option>
+                            <option>Kathmandu</option>
+                            <option>New York</option>
+                        </select>
+                    </div>
+                    <div class="filter-field">
+                        <label for="type">Job Type...</label>
+                        <select id="type" name="type">
+                            <option>Full-Time, Contract</option>
+                            <option>Full-Time</option>
+                            <option>Contract</option>
+                            <option>Internship</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary filter-btn" type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="section" id="about" aria-label="About">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Everything you need to land the right role</h2>
+                    <p>Clean listings, modern filters, and a fast application flow.</p>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Curated jobs</h3>
+                        <p>Quality roles with clear salary ranges, tech stacks, and hiring timelines.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Smart search</h3>
+                        <p>Find roles by skill, seniority, or company - optimized for remote-first hiring.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Track applications</h3>
+                        <p>Save jobs, keep notes, and stay organized from application to offer.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="employers" aria-label="For Employers">
+            <div class="container split">
+                <div>
+                    <h2>Hire faster with qualified candidates</h2>
+                    <p>Post once, reach the right talent, and manage applicants efficiently.</p>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="login.html">Post a job</a>
+                        <a class="btn btn-ghost" href="login.html">Browse talent</a>
+                    </div>
+                </div>
+                <div class="panel" aria-hidden="true">
+                    <div class="panel-row">
+                        <div class="pill">Remote</div>
+                        <div class="pill">Hybrid</div>
+                        <div class="pill">On-site</div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="jobs" aria-label="Browse Jobs">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Browse jobs</h2>
+                    <p>Start with these categories and refine your search.</p>
+                </div>
+
+                <div class="chips" aria-label="Categories">
+                    <a class="chip" href="login.html">Frontend</a>
+                    <a class="chip" href="login.html">Backend</a>
+                    <a class="chip" href="login.html">Full‑stack</a>
+                    <a class="chip" href="login.html">DevOps</a>
+                    <a class="chip" href="login.html">Data</a>
+                    <a class="chip" href="login.html">Design</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta" id="post-job" aria-label="Post a Job">
+            <div class="container cta-card">
+                <div>
+                    <h2>Ready to post a job?</h2>
+                    <p>Get your role in front of candidates who are actively looking.</p>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-primary" href="login.html">Post a job</a>
+                    <a class="btn btn-ghost" href="login.html">Browse jobs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <div class="muted">© <span id="year">2026</span> JobPortal</div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="login.html">Jobs</a>
+                <a href="login.html">Employers</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

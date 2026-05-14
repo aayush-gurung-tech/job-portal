@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Find Jobs</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body data-page="dashboard-findjobs">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="Home">JobPortal</a>
+            <nav class="top-nav" aria-label="Dashboard">
+                <a class="top-link" href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="header-actions">
+                <a class="btn btn-ghost" href="login.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <p><span class="home-crumb">Home</span> / Dashboard / Find Jobs</p>
+        </div>
+    </div>
+
+    <main id="main" class="container dashboard-layout">
+        <aside class="dashboard-sidebar">
+            <div class="profile-card-mini">
+                <div class="avatar-wrapper">
+                    <img src="" alt="Profile" class="profile-img">
+                    <div class="profile-initial">A</div>
+                </div>
+                <h2 class="dash-username">Aayush Gurung</h2>
+                <span class="badge-blue">Full Stack Developer</span>
+                <input class="profile-upload" type="file" accept="image/*" aria-label="Choose profile picture">
+                <button class="btn btn-emerald-soft" type="button" data-pick-profile>Change Profile Picture</button>
+            </div>
+
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item">Account Settings</a>
+                <a href="dashboard-findjobs.html" class="nav-item active">Find Jobs</a>
+                <a href="post-job.html" class="nav-item">Post a Job</a>
+                <a href="my-jobs.html" class="nav-item">My Jobs</a>
+                <a href="my-appliers.html" class="nav-item">My Job Appliers</a>
+                <a href="applied.html" class="nav-item">Jobs Applied</a>
+                <a href="saved.html" class="nav-item">Saved Jobs</a>
+            </nav>
+        </aside>
+
+        <section class="dashboard-content">
+            <div class="form-card">
+                <div class="section-head">
+                    <div>
+                        <h3>Find Jobs</h3>
+                        <p class="muted">Save roles or apply directly from your dashboard.</p>
+                    </div>
+                </div>
+
+                <form class="search-panel dashboard-search-panel" aria-label="Search jobs">
+                    <input type="text" placeholder="Search by job title, skill, or company" class="search-input">
+                    <button class="btn btn-emerald" type="submit">Search</button>
+                </form>
+
+                <div class="dashboard-filter-grid">
+                    <div>
+                        <label for="location">Location</label>
+                        <select id="location" class="filter-select">
+                            <option value="all">All locations</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Kathmandu">Kathmandu</option>
+                            <option value="Pokhara">Pokhara</option>
+                            <option value="Lalitpur">Lalitpur</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="posted">Date Posted</label>
+                        <select id="posted" class="filter-select">
+                            <option value="all">Any time</option>
+                            <option value="1">Last 24h</option>
+                            <option value="7">Last 7 days</option>
+                            <option value="30">Last 30 days</option>
+                        </select>
+                    </div>
+                    <div class="filter-checks">
+                        <span>Job Type</span>
+                        <label><input type="checkbox" value="Remote" data-job-type-filter> Remote</label>
+                        <label><input type="checkbox" value="Full-Time" data-job-type-filter> Full-Time</label>
+                        <label><input type="checkbox" value="Hybrid" data-job-type-filter> Hybrid</label>
+                    </div>
+                    <a href="dashboard-findjobs.html" class="btn btn-ghost" data-clear-filters>Clear</a>
+                </div>
+
+                <div class="job-grid dashboard-job-grid" aria-label="Job listings"></div>
+                <p class="form-message muted" data-post-message></p>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" data-job-modal hidden>
+        <section class="job-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" data-close-modal aria-label="Close">Close</button>
+            <p class="eyebrow" data-modal-company>Company</p>
+            <h3 id="modal-title" data-modal-title>Job Title</h3>
+            <div class="item-meta modal-meta">
+                <span data-modal-location>Location</span>
+                <span data-modal-type>Full-Time</span>
+                <span data-modal-salary>Salary</span>
+            </div>
+            <div class="modal-grid">
+                <div>
+                    <h4>Job Description</h4>
+                    <p class="muted" data-modal-desc></p>
+
+                    <h4>Responsibilities</h4>
+                    <ul data-modal-responsibilities></ul>
+
+                    <h4>Requirements</h4>
+                    <ul data-modal-requirements></ul>
+                </div>
+                <aside class="modal-summary">
+                    <h4>Job Summary</h4>
+                    <p><span>Published</span><strong data-modal-published></strong></p>
+                    <p><span>Vacancy</span><strong data-modal-vacancy></strong></p>
+                    <p><span>Experience</span><strong data-modal-experience></strong></p>
+                    <p><span>Salary</span><strong data-modal-salary></strong></p>
+
+                    <h4>Company Details</h4>
+                    <p class="muted" data-modal-company-info></p>
+                </aside>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/postjob.js"></script>
+</body>
+</html>

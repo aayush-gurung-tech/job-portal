@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Account Settings</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="Home">JobPortal</a>
+            <nav class="top-nav" aria-label="Dashboard">
+                <a class="top-link" href="dashboard.html" aria-current="page">Dashboard</a>
+            </nav>
+            <div class="header-actions">
+                <a class="btn btn-ghost" href="login.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <p><span class="home-crumb">Home</span> / Account Settings</p>
+        </div>
+    </div>
+
+    <main id="main" class="container dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <div class="profile-card-mini">
+                <div class="avatar-wrapper">
+                    <img src="" alt="Profile" class="profile-img">
+                    <div class="profile-initial">A</div>
+                </div>
+                <h2 class="dash-username">Aayush Gurung</h2>
+                <span class="badge-blue">Full Stack Developer</span>
+                <input class="profile-upload" id="profile-upload" type="file" accept="image/*" aria-label="Choose profile picture">
+                <button class="btn btn-emerald-soft" type="button" data-pick-profile>Change Profile Picture</button>
+            </div>
+
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item active">Account Settings</a>
+                <a href="dashboard-findjobs.html" class="nav-item">Find Jobs</a>
+                <a href="post-job.html" class="nav-item">Post a Job</a>
+                <a href="my-jobs.html" class="nav-item">My Jobs</a>
+                <a href="my-appliers.html" class="nav-item">My Job Appliers</a>
+                <a href="applied.html" class="nav-item">Jobs Applied</a>
+                <a href="saved.html" class="nav-item">Saved Jobs</a>
+            </nav>
+        </aside>
+
+        <!-- Main Form Area -->
+        <section class="dashboard-content">
+            <div class="form-card">
+                <div class="section-head">
+                    <div>
+                        <h3>My Profile</h3>
+                        <p class="muted">Update your account information.</p>
+                    </div>
+                    <button class="btn btn-outline" type="button" data-edit-profile>Edit</button>
+                </div>
+                <form class="profile-form" data-profile-form>
+                    <div class="input-group">
+                        <label >Name*</label>
+                        <input class="input" type="text" placeholder="Enter Name" value="Name" disabled id="accountname">
+                    </div>
+                    <div class="input-group">
+                        <label>Email*</label>
+                        <input type="email" placeholder="Enter Email" value="email@example.com"  class="input email" id="accountemail" disabled>
+                    </div>
+                    <div class="input-group">
+                        <label>Designation*</label>
+                        <input class="input profession" type="text" placeholder="Designation" value="Professional" disabled>
+                    </div>
+                    <div class="input-group">
+                        <label>Mobile*</label>
+                        <input class="input phone" type="text" placeholder="Mobile" value="+977 9800000000" disabled>
+                    </div>
+                    <div class="input-group">
+                        <label>Location</label>
+                        <input class="input location-profile" type="text" placeholder="e.g., Kathmandu, Nepal" disabled>
+                    </div>
+                    <div class="input-group">
+                        <label>Experience</label>
+                        <input class="input experience-profile" type="text" placeholder="e.g., 2 years" disabled>
+                    </div>
+                    <div class="input-group">
+                        <label>Skills</label>
+                        <input class="input skills-profile" type="text" placeholder="e.g., HTML, CSS, JavaScript" disabled>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-emerald update">Update</button>
+                        <button type="button" class="btn btn-ghost cancel" data-cancel-profile>Cancel</button>
+                    </div>
+                    <p class="form-message muted" data-form-message></p>
+                </form>
+            </div>
+
+            <div class="grid-2">
+                <div class="panel-card">
+                    <h4>Resume</h4>
+                    <p class="muted">Upload your latest resume/CV.</p>
+                    <div class="upload-row">
+                        <input class="file-input cv-input" type="file" accept=".pdf,.png,.jpg,.jpeg" aria-label="Upload resume">
+                        <button class="btn btn-emerald cv-upload-btn" type="button" data-action-message="Resume uploaded successfully.">Upload</button>
+                    </div>
+                    <button class="cv-result" type="button" hidden>
+                        <span>CV</span>
+                        <small class="cv-name"></small>
+                    </button>
+                </div>
+                <div class="panel-card">
+                    <h4>Change Password</h4>
+                    <p class="muted">Update the password for this account.</p>
+                    <form class="password-form">
+                        <div class="input-group">
+                            <label>Current Password*</label>
+                            <input class="current-password" type="password" placeholder="Current password">
+                        </div>
+                        <div class="input-group">
+                            <label>New Password*</label>
+                            <input class="new-password" type="password" placeholder="New password">
+                        </div>
+                        <div class="input-group">
+                            <label>Confirm New Password*</label>
+                            <input class="confirm-password" type="password" placeholder="Confirm new password">
+                        </div>
+                        <button class="btn btn-emerald" type="submit">Change Password</button>
+                        <p class="form-message muted" data-password-message></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="cv-modal" hidden>
+        <div class="cv-modal-box">
+            <button class="cv-close" type="button">Close</button>
+            <div class="cv-preview"></div>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>

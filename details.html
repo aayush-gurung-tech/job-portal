@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="details-page">
+        <header class="site-header">
+            <div class="container header-row">
+                <a class="brand" href="index.html" aria-label="Home">JobPortal</a>
+                <nav class="top-nav" aria-label="Primary">
+                    <a class="top-link" href="index.html">Home</a>
+                    <a class="top-link" href="findjobs.html" aria-current="page">Find Jobs</a>
+                </nav>
+                <div class="header-actions">
+                    <a class="btn btn-ghost" href="login.html">Login</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="main" class="container details-grid">
+            <div class="main-content">
+                <section class="content-card">
+                    <a href="findjobs.html" class="back-link">Back to Jobs</a>
+                    <div class="title-row">
+                        <div>
+                            <p class="eyebrow">XYZ Company</p>
+                            <h1>Software Engineer</h1>
+                        </div>
+                        <button class="save-btn" type="button" data-login-required>Save</button>
+                    </div>
+                    <div class="meta-tags">
+                        <span>Noida, India</span>
+                        <span>Part-time</span>
+                        <span>Remote Friendly</span>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>Job description</h3>
+                        <p>We are looking for a software engineer who can build reliable features, work with a small product team, and write clean code that is easy to maintain.</p>
+
+                        <h3>Responsibilities</h3>
+                        <ul>
+                            <li>Develop high-quality software design and architecture.</li>
+                            <li>Identify, prioritize and execute tasks in the software development life cycle.</li>
+                            <li>Collaborate with designers and product managers to improve user experience.</li>
+                            <li>Write readable code and help review pull requests.</li>
+                        </ul>
+
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li>Good knowledge of HTML, CSS, JavaScript, and one modern framework.</li>
+                            <li>Comfortable working with APIs and version control.</li>
+                            <li>Strong communication and problem-solving skills.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="details-sidebar">
+                <div class="summary-card">
+                    <h3>Job Summary</h3>
+                    <ul class="summary-list">
+                        <li><span>Published on</span><strong>12 Nov, 2019</strong></li>
+                        <li><span>Vacancy</span><strong>2 Positions</strong></li>
+                        <li><span>Salary</span><strong>50k - 120k/y</strong></li>
+                        <li><span>Location</span><strong>Noida, India</strong></li>
+                    </ul>
+                </div>
+                <div class="summary-card">
+                    <h3>Company Details</h3>
+                    <p class="company-name">XYZ Company</p>
+                    <p class="muted">Product company hiring engineers for web applications and internal tools.</p>
+                    <button class="btn btn-primary full-width" type="button" data-login-required>Apply Now</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll("[data-login-required]").forEach((button) => {
+            button.addEventListener("click", () => {
+                window.location.href = "login.html";
+            });
+        });
+    </script>
+</body>
+</html>

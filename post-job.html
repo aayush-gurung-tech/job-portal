@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Post a Job</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="index.html" aria-label="Home">JobPortal</a>
+            <nav class="top-nav" aria-label="Dashboard">
+                <a class="top-link" href="dashboard.html">Dashboard</a>
+            </nav>
+            <div class="header-actions">
+                <a class="btn btn-ghost" href="login.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <p><span class="home-crumb">Home</span> / Dashboard / Post a Job</p>
+        </div>
+    </div>
+
+    <main id="main" class="container dashboard-layout">
+        <aside class="dashboard-sidebar">
+            <div class="profile-card-mini">
+                <div class="avatar-wrapper">
+                    <img src="" alt="Profile" class="profile-img">
+                    <div class="profile-initial">A</div>
+                </div>
+                <h2 class="dash-username">Aayush Gurung</h2>
+                <span class="badge-blue">Full Stack Developer</span>
+                <input class="profile-upload" type="file" accept="image/*" aria-label="Choose profile picture">
+                <button class="btn btn-emerald-soft" type="button" data-pick-profile>Change Profile Picture</button>
+            </div>
+
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item">Account Settings</a>
+                <a href="dashboard-findjobs.html" class="nav-item">Find Jobs</a>
+                <a href="post-job.html" class="nav-item active">Post a Job</a>
+                <a href="my-jobs.html" class="nav-item">My Jobs</a>
+                <a href="my-appliers.html" class="nav-item">My Job Appliers</a>
+                <a href="applied.html" class="nav-item">Jobs Applied</a>
+                <a href="saved.html" class="nav-item">Saved Jobs</a>
+            </nav>
+        </aside>
+
+        <section class="dashboard-content">
+            <div class="form-card">
+                <div class="section-head">
+                    <div>
+                        <h3>Post a Job</h3>
+                        <p class="muted">Create a new listing and publish it to the portal.</p>
+                    </div>
+                </div>
+
+                <form class="profile-form post-form" data-action-message="Job published successfully.">
+                    <div class="grid-2" style="margin-top: 0;">
+                        <div class="input-group">
+                            <label>Job Title*</label>
+                            <input type="text" class="job-title" placeholder="e.g., Frontend Developer">
+                        </div>
+                        <div class="input-group">
+                            <label>Company*</label>
+                            <input type="text" class="company" placeholder="e.g., Arbeitnow Analytics">
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>Location*</label>
+                            <input type="text" class="location" placeholder="e.g., Remote - Nepal">
+                        </div>
+                        <div class="input-group">
+                            <label>Job Type*</label>
+                            <select class="job-type">
+                                <option>Full-Time</option>
+                                <option>Part-Time</option>
+                                <option>Contract</option>
+                                <option>Internship</option>
+                                <option>Remote</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>Salary Range</label>
+                            <input type="text" class="input-group salary-range" placeholder="e.g., $90k - $120k">
+                        </div>
+                        <div class="input-group">
+                            <label>Experience Level</label>
+                            <select class="experience-level">
+                                <option>Junior</option>
+                                <option>Mid</option>
+                                <option>Senior</option>
+                                <option>Lead</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Job Description*</label>
+                        <textarea placeholder="Describe the role, responsibilities, and what success looks like..." class="job-description"></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Requirements</label>
+                        <textarea placeholder="List the key requirements (skills, experience, tools)..." class="requirements"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-emerald publish-job">Publish Job</button>
+                        <button type="button" class="btn btn-ghost save-draft" data-action-message="Draft saved.">Save Draft</button>
+                    </div>
+                    <p class="form-message muted" data-post-message></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/postjob.js"></script>
+</body>
+</html>
