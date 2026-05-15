@@ -4,7 +4,7 @@ A modern job portal web app where candidates can discover jobs, save roles,
 apply for openings, and manage their profile, while employers can post jobs and
 review applicants from a clean dashboard.
 
-🔗 **Live Demo:** [job-portal-demo.netlify.app](https://.../)
+🔗 **Live Demo:**[ \[job-portal-demo.netlify.app\]](https://stackhired.netlify.app/)
 
 ![Job Portal Preview]![alt text](image.png)
 ## ✨ Features
