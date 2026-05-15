@@ -6,8 +6,7 @@ review applicants from a clean dashboard.
 
 🔗 **Live Demo:** [job-portal-demo.netlify.app](https://.../)
 
-![Job Portal Preview](./assets/image/image.png)
-
+![Job Portal Preview]![alt text](image.png)
 ## ✨ Features
 
 - 🔐 User signup and login flow
@@ -29,7 +28,8 @@ review applicants from a clean dashboard.
 
 ## 📸 Screenshots
 
-![Home](./assets/image/image.png)
+![Home]![alt text](image-1.png)
+![Dashboard](image-2.png)
 
 <!-- Add more screenshots when available -->
 <!-- ![Dashboard](./assets/dashboard.png) -->
@@ -101,4 +101,4 @@ job-portal/
 
 ## 📬 Contact
 
-**Your Name** - [LinkedIn](https://linkedin.com/in/...) - [your@email.com](mailto:your@email.com)
+**Aayush Gurung** - [LinkedIn](https://www.linkedin.com/in/aayush-gurung-9339923b3/) - [nabin.laghey.official@email.com](mailto:your@email.com)
