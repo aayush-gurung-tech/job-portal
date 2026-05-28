@@ -85,7 +85,7 @@ job-portal/
 ## 💡 What I Learned
 
 - Building multi-page web app navigation
-- Creating authentication-like flows with browser storages
+- Creating authentication-like flows with browser storage
 - Managing saved, posted, and applied job data with LocalStorage
 - Designing dashboard pages for both candidates and employers
 - Serving a static frontend with an Express.js server
